@@ -22,7 +22,9 @@ class ExportModule extends ModuleContract {
     }, "singleton");
   }
 
-  init() {}
+  init(container) {
+    container.resolve("exporter");
+  }
 }
 
 module.exports = new ExportModule();

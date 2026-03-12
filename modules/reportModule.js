@@ -28,7 +28,9 @@ class ReportModule extends ModuleContract {
     }, "singleton");
   }
 
-  init() {}
+  init(container) {
+    container.resolve("reportService");
+  }
 }
 
 module.exports = new ReportModule();

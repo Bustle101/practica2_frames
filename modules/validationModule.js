@@ -35,7 +35,9 @@ class ValidationModule extends ModuleContract {
     }, "singleton");
   }
 
-  init() {}
+  init(container) {
+    container.resolve("validator");
+  }
 }
 
 module.exports = new ValidationModule();
